@@ -36,7 +36,7 @@ class EmailHelper(object):
             print('Error sending email: %s', e)
 
 
-class IngringementHelper(EmailHelper):
+class InfringementHelper(EmailHelper):
     def __init__(self, speed_limit: float) -> None:
         super().__init__()
 
