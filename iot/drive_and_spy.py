@@ -67,18 +67,18 @@ def keycode_callback(keycode):
 
 
 async def blink_leds():
-    for i in range(0, 5):
+    for i in range(0, 6):
         # headlight leds on
         await rvr.set_all_leds(
             led_group=RvrLedGroups.headlight_left.value,
-            led_brightness_values=[255, 0, 0]
+            led_brightness_values=[255, 124, 0]
         )
         await rvr.set_all_leds(
             led_group=RvrLedGroups.headlight_right.value,
-            led_brightness_values=[255, 0, 0]
+            led_brightness_values=[255, 124, 0]
         )
 
-        await asyncio.sleep(0.5)
+        await asyncio.sleep(0.2)
 
         # headlight leds off
         await rvr.set_all_leds(
@@ -90,7 +90,7 @@ async def blink_leds():
             led_brightness_values=[0, 0, 0]
         )
 
-        await asyncio.sleep(0.5)
+        await asyncio.sleep(0.2)
 
 
 async def control_loop():
