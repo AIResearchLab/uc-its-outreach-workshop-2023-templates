@@ -9,7 +9,7 @@ class EmailHelper(object):
         # Set up your Gmail account details
         self.sender_email = 'scitech.studentengagement@gmail.com'
         self.receiver_email = 'scitech.studentengagement@gmail.com'
-        self.password = 'jlaezogdlhjnllwu'
+        self.password = os.getenv("UCO_GMAIL_PASSWORD", "bug-the-bug-bug")
         self.subject = 'NOTICE - Automatic Speeding Infringement'
         self.body = "email body"
         self.email_event_complete = False
